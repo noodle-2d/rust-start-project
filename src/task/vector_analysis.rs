@@ -1,10 +1,11 @@
 use crate::util::input;
+use crate::util::sort;
 
 pub fn run_task() {
     let vector = get_number_vector_from_stdin();
     print_vector(&vector, "Entered vector");
 
-    let sorted_vector = sort_number_vector(vector);
+    let sorted_vector = sort::sort(vector);
     print_vector(&sorted_vector, "Sorted vector");
 }
 
@@ -27,9 +28,4 @@ fn get_number_vector_from_stdin() -> Vec<i32> {
     }
 
     number_vector
-}
-
-fn sort_number_vector(vector: Vec<i32>) -> Vec<i32> {
-    // todo: implement sorting
-    vector
 }
